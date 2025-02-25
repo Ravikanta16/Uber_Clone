@@ -55,7 +55,7 @@ const ConfirmRidePopUp = (props) => {
                     props.setConfirmRidePopUpPanel(false)
                     props.setFinalRidePanel(true)
                 }}
-                className='bg-green-500 text-white w-full rounded-md justify-end right-4 p-2'>Confirm</button>
+                className='bg-green-500 text-white w-full rounded-md p-2'>Confirm</button>
                 </form>
             </div>
         </div>

@@ -3,24 +3,21 @@ import { useEffect } from 'react';
 
 const LookingForDriver = (props) => {
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            props.setVehicleFound(false);
-            props.setWaitingDriver(true);
-        }, 20000);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         props.setVehicleFound(false);
+    //         props.setWaitingDriver(true);
+    //     }, 20000);
 
-        // return () => clearTimeout(timer); // Cleanup function
-    }, []); 
+    //     // return () => clearTimeout(timer); // Cleanup function
+    // }, [props.setWaitingDriver(true)]); 
 
-    // const timer = setTimeout(() => {
-    //     props.setVehicleFound(false);
-    //     props.setWaitingDriver(true);
-    // }, 20000);
 
     return (
         <div>
             <h5 className='w-full text-center' onClick={()=>{
                 props.setVehicleFound(false)
+                props.setWaitingDriver(true);
             }}><i className="text-lg text-gray-300 ri-arrow-down-wide-fill"></i></h5>
             <h3 className='text-2xl font-semibold mb-4'>Looking for a driver</h3>
             <div className='flex justify-between items-center flex-col'>

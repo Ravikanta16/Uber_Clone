@@ -9,6 +9,7 @@ const VehiclePanel = (props) => {
                 <h3 className='text-2xl font-semibold mb-4'>Choose a Vehicle</h3>
                 <div onClick={()=>{
                     props.setConfirmRide(true)
+                    props.setVehiclePanelOpen(false)
                 }}
                     className='flex items-center justify-between active:border-black border-2 bg-gray-100 rounded-lg w-full p-4 gap-2 mb-4'>
                     <img className='h-12' src='https://imgs.search.brave.com/8XAviu7xl0bXELAVDTwzQgDAiOFEo3mjJKqOtMEClbc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9wbmdm/cmUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9jYXItNDQtMi0z/MDB4MjEyLnBuZw'></img>
@@ -21,6 +22,7 @@ const VehiclePanel = (props) => {
                 </div>
                 <div onClick={()=>{
                     props.setConfirmRide(true)
+                    props.setVehiclePanelOpen(false)
                 }} 
                     className='flex items-center justify-between active:border-black border-2 bg-gray-100 rounded-lg w-full p-4 gap-2 mb-4'>
                     <img className='h-12' src='https://imgs.search.brave.com/8TJbmBX12-4pQ4BUcnmPp912TeM9Husb6ou67QrgYzI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9wbHVz/cG5nLmNvbS9pbWct/cG5nL3BuZy1oZC1i/aWtlLW1vdG9yYmlr/ZS1wbmctaGQtNDAw/LnBuZw'></img>
@@ -33,6 +35,7 @@ const VehiclePanel = (props) => {
                 </div>
                 <div onClick={()=>{
                     props.setConfirmRide(true)
+                    props.setVehiclePanelOpen(false)
                 }}
                     className='flex items-center justify-between active:border-black border-2 bg-gray-100 rounded-lg w-full p-4 gap-2 mb-4'>
                     <img className='h-12' src='https://imgs.search.brave.com/RHpGuzSWfShl1C88lkLShQ5rP5dajCxVj81xW6cn3Sk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nbWFydC5jb20v/ZmlsZXMvNS9BdXRv/LVJpY2tzaGF3LVBO/Ry1GaWxlLnBuZw'></img>

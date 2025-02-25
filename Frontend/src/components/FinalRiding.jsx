@@ -13,16 +13,16 @@ const FinalRiding = (props) => {
                 </div>
                 <img className='h-full w-full' src='https://t3.ftcdn.net/jpg/07/28/30/26/240_F_728302620_Xddnf5Cl0K1ACZurd6yByUzHiHMMIoe6.jpg'></img>
             </div>
-            <div onClick={()=>{
+            <Link to = "/completeRiding"><div onClick={()=>{
                 props.setFinalRidePanel(false)
             }}
                 className='bg-yellow-400 h-1/5 px-8'>
                 <h5><i className="flex w-full text-center justify-center text-2xl font-medium text-yellow-600 ri-arrow-up-wide-fill"></i></h5>
                 <div className='flex items-center justify-between mt-4'>
                     <h4 className='text-lg font-medium'>4 Km Away</h4>
-                    <Link to ="/completeRiding" className='bg-green-500 text-white w-1/2 rounded-md p-2'>Complete Ride</Link>
+                    <button className='bg-green-500 text-white w-1/2 rounded-md p-2'>Complete Ride</button>
                 </div>
-            </div>
+            </div></Link>
         </div>
     );
 };
