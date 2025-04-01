@@ -23,7 +23,7 @@ const CompleteRide = () => {
     },[completeRidePanel])
 
     return (
-        <div>
+        <div ref={completeRidePanelRef}>
             <h5 className='w-full text-center' onClick={()=>{
                 setCompleteRidePanel(false)
             }}><i className="text-lg text-gray-300 ri-arrow-down-wide-fill"></i></h5>

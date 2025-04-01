@@ -8,6 +8,7 @@ const VehiclePanel = (props) => {
                 }}><i className="text-lg text-gray-300 ri-arrow-down-wide-fill"></i></h5>
                 <h3 className='text-2xl font-semibold mb-4'>Choose a Vehicle</h3>
                 <div onClick={()=>{
+                    props.setVehicleType('car')
                     props.setConfirmRide(true)
                     props.setVehiclePanelOpen(false)
                 }}
@@ -18,9 +19,10 @@ const VehiclePanel = (props) => {
                         <h5 className='font-medium text-sm'>2 mins away</h5>
                         <p className='font-medium text-xs text-gray-600'>Affordable,compact rides</p>
                     </div>
-                    <h2 className='text-xl font-semibold'>₹180.23</h2>
+                    <h2 className='text-xl font-semibold'>₹{props.fare['car']}</h2>
                 </div>
                 <div onClick={()=>{
+                    props.setVehicleType('bike')
                     props.setConfirmRide(true)
                     props.setVehiclePanelOpen(false)
                 }} 
@@ -31,9 +33,10 @@ const VehiclePanel = (props) => {
                         <h5 className='font-medium text-sm'>3 mins away</h5>
                         <p className='font-medium text-xs text-gray-600'>Affordable,bike rides</p>
                     </div>
-                    <h2 className='text-xl font-semibold'>₹65.45</h2>
+                    <h2 className='text-xl font-semibold'>₹{props.fare['bike']}</h2>
                 </div>
                 <div onClick={()=>{
+                    props.setVehicleType('auto')
                     props.setConfirmRide(true)
                     props.setVehiclePanelOpen(false)
                 }}
@@ -44,7 +47,7 @@ const VehiclePanel = (props) => {
                         <h5 className='font-medium text-sm'>5 mins away</h5>
                         <p className='font-medium text-xs text-gray-600'>Affordable,compact rides</p>
                     </div>
-                    <h2 className='text-xl font-semibold'>₹110.67</h2>
+                    <h2 className='text-xl font-semibold'>₹{props.fare['auto']}</h2>
                 </div> 
         </div>
     );

@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import React from 'react';
+import {CaptainDataContext} from '../context/CaptainContext'
 
 const CaptainDetail = (props) => {
+    const {captainData}=useContext(CaptainDataContext)
+
     return (
         <div>
             <div className='p-6'>
@@ -10,7 +14,7 @@ const CaptainDetail = (props) => {
                         <h4 onClick={()=>{
                             props.setRidePopUpPanel(true)
                         }}
-                        className='text-lg font-semibold'>Harshit</h4>
+                        className='text-lg font-semibold capitalize'>{captainData.fullname.firstname+" "+captainData.fullname.lastname}</h4>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
                         <h4 className='text-lg font-semibold'>₹290</h4>

@@ -5,9 +5,7 @@ import UserLogin from './Pages/userLogin';
 import UserSignUp from './Pages/userSignUp';
 import CaptainLogin from './Pages/captainLogin';  
 import CaptainSignUp from './Pages/captainSignUp';  
-import {UserDataContext} from './context/UserContext.jsx'
 import Start from './Pages/Start';
-import { useContext } from 'react';
 import UserProtectedWrapper from './Pages/userProtectedWrapper.jsx';
 import UserLogout from './Pages/userLogout.jsx';
 import CaptainHome from './Pages/captainHome.jsx';
@@ -16,10 +14,7 @@ import CaptainLogout from './Pages/captainLogout.jsx';
 import RidingTrack from './components/RidingTrack.jsx';
 import CompleteRide from './components/CompleteRide.jsx';
 
-
 const App = () => {
-  const ans = useContext(UserDataContext)
-  // console.log(ans.user)
 
   return (
     <Routes>

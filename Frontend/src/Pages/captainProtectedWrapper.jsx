@@ -10,8 +10,10 @@ const CaptainProtectedWrapper = ({children}) => {
 
     useEffect(() => {
         if(!token){
-            navigate('/captainlogin')
+            console.log("home page pr nhi jaega me kunki mujhe token nhi mila")
+            navigate('/captainlogin');
         }
+
     },[token]);
 
     axios.get(`${import.meta.env.VITE_BASE_URL}/captains/profile`,{
@@ -19,11 +21,13 @@ const CaptainProtectedWrapper = ({children}) => {
             Authorization:`Bearer ${token}`
         }
     }).then((response)=>{
-            if(response.status === 200){
+            if(response.status === 201){
                 if(response.data!==null){
-                    console.log(response.data)
+                    console.log("home page pr me jaunga kunki mujhe token bhi milgya aur profile bhi")
+                    // setIsLoading(false)
                 }
                 else{
+                    console.log("home page pr nhi jaunga kunki response shi nhi mila")
                     navigate('/captainlogin')
                 }
                 // console.log(response.data)

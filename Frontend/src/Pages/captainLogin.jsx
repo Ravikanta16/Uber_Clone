@@ -20,12 +20,16 @@ const CaptainLogin = () => {
             password:password
         }
 
-        const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/login`,CaptainDetails);
-        if(response.status === 201){
-            const data=response.data;
-            setCaptainData(data.captain)  
-            localStorage.setItem('token',data.token)
-            navigate('/captain/home')
+        try {
+            const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/login`,CaptainDetails);
+            if (response.status === 201) {
+                const data = response.data;
+                setCaptainData(data.captain);
+                localStorage.setItem('token', data.token);
+                navigate('/captain/home');
+            }
+        } catch (error) {
+            console.error('Error registering captain:', error);
         }
 
         setEmail('')

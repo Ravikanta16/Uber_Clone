@@ -1,11 +1,11 @@
 import React from 'react';
 
-const WaitForDriver = () => {
+const WaitForDriver = (props) => {
     return (
         <div>
-            {/* <h5 className='w-full text-center' onClick={()=>{
-                props.setConfirmRide(false)
-            }}><i className="text-lg text-gray-300 ri-arrow-down-wide-fill"></i></h5> */}
+            <h5 className='w-full text-center' onClick={()=>{
+                props.setWaitingDriver(false)
+            }}><i className="text-lg text-gray-300 ri-arrow-down-wide-fill"></i></h5>
             <div className='flex border-b-2 border-gray-300 justify-between mb-2'>
                 <h3 className='text-2xl font-semibold mb-4'>Meet at the pickup point</h3>
                 <div className='flex flex-col px-3 items-center justify-center border bg-black mb-2'>
@@ -27,7 +27,7 @@ const WaitForDriver = () => {
                     <h4 className='mt-3'><i className="items-center border bg-gray-200 rounded-lg p-1 ri-map-pin-user-fill"></i></h4>
                     <div>
                         <h5 className='text-lg font-medium'>511/11 A</h5>
-                        <p className='text-sm text-gray-600'>Gali no.2 TriNagar, New Delhi</p>
+                        <p className='text-sm text-gray-600'>{props.pickUp}</p>
                     </div>
                 </div>
             </div>

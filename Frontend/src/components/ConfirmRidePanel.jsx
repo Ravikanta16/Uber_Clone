@@ -14,20 +14,20 @@ const ConfirmRidePanel = (props) => {
                     <h4><i className="items-center border bg-gray-200 rounded-lg p-1 ri-map-pin-user-fill"></i></h4>
                     <div>
                         <h5 className='text-lg font-medium'>511/11 A</h5>
-                        <p className='text-sm text-gray-600'>Gali no.2 TriNagar, New Delhi</p>
+                        <p className='text-sm text-gray-600'>{props.pickUp}</p>
                     </div>
                 </div>
                 <div className='flex w-full gap-3 active:border-black bg-gray-50 rounded-md p-1 border-b-2 mb-4'>
                     <h4><i className="border bg-gray-200 rounded-lg p-1 ri-map-pin-fill"></i></h4>
                     <div>
                         <h5 className='text-lg font-medium'>511/11 A</h5>
-                        <p className='text-sm text-gray-600'>Gali no.2 TriNagar, New Delhi</p>
+                        <p className='text-sm text-gray-600'>{props.destination}</p>
                     </div>
                 </div>
                 <div className='flex w-full gap-3 active:border-black bg-gray-50 rounded-md p-1 mb-4'>
                     <h4><i className="border bg-gray-200 rounded-lg p-1 ri-currency-line"></i></h4>
                     <div>
-                        <h5 className='text-lg font-medium'>₹180.45</h5>
+                        <h5 className='text-lg font-medium'>₹{props.fare[props.vehicleType]}</h5>
                         <p className='text-sm text-gray-600'>Cash Cash</p>
                     </div>
                 </div>
